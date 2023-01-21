@@ -24,7 +24,8 @@ app.get('/execute-command/', (req, res) => {
         res.send(`Error: ${err}`);
         return;
       }
-      res.send(`Output: ${stdout}`);
+      // return as json
+        res.send({ stdout, stderr });
     });
 });
   
